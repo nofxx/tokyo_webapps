@@ -1,0 +1,38 @@
+= Sinatra, Ramaze and Rails on Tokyo
+
+* Ruby (1.8, 1.9)
+* Tokyo Cabinet
+* Tokyo Tyrant (optional)
+* Tokyo Dystopia (optional) TODO
+
+
+== Framework
+
+* manveru-ramaze (2009.06.04)
+* sinatra (0.9.2)
+* rails (2.3.2)
+
+
+== Gems
+
+* dm-tokyo-cabinet
+* haml
+* rspec
+* cucumber
+
+
+== Tokyo Cabinet
+
+You can choose between Cabinet or Tyrant on the project`s config files.
+Tyrant as default on port 1978 (ttserver something.tct)
+Don't forget the .tct
+
+
+== Todo
+
+Some stats? Implementation LOC, performance..
+
+
+== License
+
+Use it at your own risk license.
