@@ -1,0 +1,24 @@
+<h1>Listing ar_notes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Rate</th>
+  </tr>
+
+<% @ar_notes.each do |ar_note| %>
+  <tr>
+    <td><%=h ar_note.title %></td>
+    <td><%=h ar_note.body %></td>
+    <td><%=h ar_note.rate %></td>
+    <td><%= link_to 'Show', ar_note %></td>
+    <td><%= link_to 'Edit', edit_ar_note_path(ar_note) %></td>
+    <td><%= link_to 'Destroy', ar_note, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New note', new_ar_note_path %>

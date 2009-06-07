@@ -1,0 +1,13 @@
+*#*#
+*.#*
+*~
+*flymake.rb
+*.swp
+*.tmproj
+.DS_Store
+tmp/**/*
+tmp/*
+*.tct
+*.sqlite3
+*.log
+rails/**/*schema.rb

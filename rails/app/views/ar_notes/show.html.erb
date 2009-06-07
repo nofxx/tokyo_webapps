@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @ar_note.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @ar_note.body %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%=h @ar_note.rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_ar_note_path(@ar_note) %> |
+<%= link_to 'Back', ar_notes_path %>

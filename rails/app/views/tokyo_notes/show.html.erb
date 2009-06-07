@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @tokyo_note.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @tokyo_note.body %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%=h @tokyo_note.rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_tokyo_note_path(@tokyo_note) %> |
+<%= link_to 'Back', tokyo_notes_path %>
