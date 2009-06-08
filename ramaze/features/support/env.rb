@@ -1,21 +1,18 @@
-# Sinatra
-app_file = File.join(File.dirname(__FILE__), *%w[.. .. app.rb])
-require app_file
-# Force the application name because polyglot breaks the auto-detection logic.
-Sinatra::Application.app_file = app_file
-
-# RSpec matchers
-require 'spec/expectations'
-
-# Webrat
+# Ramaze Cucumber
+require 'ramaze'
 require 'webrat'
+require 'ramaze/spec/bacon'
+require File.join(File.dirname(__FILE__), *%w[.. .. start.rb])
+
+#def app; Ramaze.middleware; end
+Ramaze.setup_dependencies
+
 Webrat.configure do |config|
-  config.mode = :sinatra
+  config.mode = :rack_test
 end
 
 World do
-  session = Webrat::SinatraSession.new
-  session.extend(Webrat::Matchers)
-  session.extend(Webrat::HaveTagMatcher)
-  session
+  extend Rack::Test::Methods
+  extend Webrat::Methods
+  extend Webrat::Matchers
 end

@@ -21,4 +21,4 @@ require 'model/init'
 require 'controller/init'
 
 
-Ramaze.start(:adapter => :mongrel, :mode => :dev) #if $0 == __FILE__
+Ramaze.start(:adapter => :mongrel, :mode => :dev) if $0 == __FILE__

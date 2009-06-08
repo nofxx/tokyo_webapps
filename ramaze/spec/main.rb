@@ -1,5 +1,6 @@
+require 'rubygems'
 require 'ramaze'
-require 'ramaze/spec'
+require 'ramaze/spec/bacon'
 
 require __DIR__('../start')
 Ramaze.options.roots = __DIR__('../')
