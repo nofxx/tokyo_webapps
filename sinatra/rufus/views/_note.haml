@@ -1,0 +1,5 @@
+%input{:id => "title", :name => 'note[title]', :style => "width: 100%"}= @note.title
+%textarea{:id => "body", :name => 'note[body]', :rows => 30, :style => "width: 100%"}= @note.body
+%input.submit{:type => :submit, :value => "Save"}
+or
+%a.cancel{:href=>"/#{@note}"} cancel

@@ -1,0 +1,4 @@
+%h1=  "Editing #{@note.title}"
+%form{:method => 'PUT', :action => "/notes/#{@note.pk}"}
+  %input{:name => "_method", :value => "put"}
+  = haml(:_note, :layout => false)
