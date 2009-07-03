@@ -10,12 +10,13 @@ Rails::Initializer.run do |config|
   # config.gem 'dm-aggregates'
   # config.gem 'do_sqlite3'
   config.gem 'rufus-tokyo'
-  config.gem 'tokyo_store'
+  config.gem 'tokyo_store' #, :lib => false
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
   config.time_zone = 'UTC'
 
-  config.action_controller.session_store = :tokyo_store
+
 
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :pt
 end
+ActionController::Base.session_store = Rack::Session::Tokyo
