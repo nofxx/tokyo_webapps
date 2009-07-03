@@ -1,0 +1,11 @@
+development: &defaults
+  :adapter: postgres
+  :database: play_development
+
+test:
+  <<: *defaults
+  :database: play_development
+
+production:
+  <<: *defaults
+  :database: play_development
