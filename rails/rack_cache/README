@@ -1,0 +1,8 @@
+= Tokyo Based Rack Cache
+
+Example of a rails app with rack-cache handled by tokyo_store.
+
+
+= Requires
+
+* tokyo_store http://github.com/nofxx/tokyo_store
