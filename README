@@ -13,9 +13,22 @@
 * rails (2.3.2)
 
 
+== Clients
+
+Each demo has it's folder name based on the client used:
+
+rufus:: rufus-tokyo http://github.com/jmettraux/rufus-tokyo
+cab:: cabinet http://tokyocabinet.sourceforge.net/rubypkg
+tyr:: tyrant http://tokyocabinet.sourceforge.net/tyrantrubypkg
+
+Using DataMapper:
+
+dm-tokyo-adapter::  http://github.com/shanna/dm-tokyo-adapter
+
+
 == Gems
 
-* dm-tokyo-cabinet
+* dm-core (0.10+)
 * haml
 * rspec
 * cucumber
@@ -31,6 +44,14 @@ Don't forget the .tct
 == Todo
 
 Some stats? Implementation LOC, performance..
+
+
+== Thanks
+
+Mikio Hirabayashi:: tokyo products
+John Mettraux:: rufus-tokyo
+Shane Hanna:: dm-tokyo-adapter
+DataMapper Team:: dm-core
 
 
 == License
