@@ -1,7 +1,9 @@
 require "rubygems"
 require "sinatra"
+require "andand"
 require "model/init"
 require "model/note"
+require "model/user"
 require "haml"
 
 get '/' do
@@ -31,13 +33,14 @@ end
 put '/notes/:id' do |id|
   @note = Note.get id
   @note.update(params[:note])
-  redirect "/notes/#{@note.pk}"
+  redirect "/notes/#{@note.id}"
 end
 
 post '/notes' do
+  puts env
   @note = Note.new(params[:note])
   if @note.save
-    redirect "/notes/#{@note.pk}"
+    redirect env['HTTP_REFERER'] =~ /new/ ? "/notes/#{@note.id}" : "notes"
   end
 end
 

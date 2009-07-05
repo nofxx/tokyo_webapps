@@ -4,5 +4,12 @@
 
 - for note in @notes do
   %p
-    %a{:href => "/notes/#{note.pk}"}= note.title
+    %a{:href => "/notes/#{note.id}"}= note.title
     = note.body
+    %p= note.user.andand.name
+
+%form{:method => 'POST', :action => "/notes"}
+  %input{:id => "title", :name => 'note[title]', :style => "width: 100%"}
+  %textarea{:id => "body", :name => 'note[body]', :rows => 30, :style => "width: 100%"}
+  %input{:id => "user_name", :name => 'note[user][name]', :style => "width: 100%"}
+  %input.submit{:type => :submit, :value => "Save"}
